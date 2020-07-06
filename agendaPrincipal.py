@@ -10,5 +10,16 @@ def menu():
     print("Aactualizar")
 
 
-if if __name__ == "__main__":
-   
+op = "si"
+
+if __name__ == "__main__":
+    while(op != "no"):
+        op = input("Escribe la acción a realizar:\n\t1.- Agregar\n\t2.- Mostrar todo\n\t3.- Buscar\n\t4.- Salir\n\t   : ")
+        if op == "1":
+            print("Contacto agregado\n")
+        elif op == "2":
+        elif op in ["salir", "no", "4"]:
+            print("\nAdiós, bye")
+            exit()
+        else:
+            print("\nOpción no válida\n")
