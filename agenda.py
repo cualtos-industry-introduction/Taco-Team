@@ -15,6 +15,7 @@ class Agenda():
                     contacto = json.loads(registro)
                     self.contactos.append(contacto)
         except FileNotFoundError as error:
+            print(error)
             pass
 
     def guardar(self):
