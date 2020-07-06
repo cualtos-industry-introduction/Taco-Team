@@ -1,7 +1,8 @@
 from agenda import Agenda
 from contacto import Contacto
 # Contactos es un objeto que contiente la lsita de todos los contactos
-contactos = agenda.obtenerContactos()
+
+contactos = agenda.obtenerContactos
 
 def crear():
     nuevo_contacto = Contacto (input("Ingresa el nombre del contacto"))
