@@ -3,6 +3,8 @@ from contacto import Contacto
 
 opcion = "si"
 agenda = Agenda('agenda')
+contactos = agenda.obtenerContactos()
+
 
 def menu():
     print("\n", 18*"_", "MENÚ", 18*"_")
@@ -30,9 +32,16 @@ def opciones():
         exit()
     else:
         print("\nOpción no válida\n")
+def crear():
+    nuevo_contacto = Contacto (input("Ingresa el nombre del contacto"))
+    nuevo_contacto.correo = input("Ingresa el correo el del contacto")
+    nuevo_contacto.teleono = input("Ingresa el teléfono del contacto")
+    nuevo_contacto.empresa = input("Ingresarla empresa para la que labora:")
+    nuevo_contacto.nota = input("Ingresarla empresa para la que labora:")
+    contactos.append(nuevo_contacto)
+ 
 
 if __name__ == "__main__":
     while(opcion != "no"):
         menu()
         opciones()
-        
