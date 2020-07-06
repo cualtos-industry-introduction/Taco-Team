@@ -35,11 +35,11 @@ def opciones():
     else:
         print("\nOpción no válida\n")
 def crear():
-    nuevo_contacto = Contacto (input("Ingresa el nombre del contacto"))
-    nuevo_contacto.correo = input("Ingresa el correo el del contacto")
-    nuevo_contacto.teleono = input("Ingresa el teléfono del contacto")
-    nuevo_contacto.empresa = input("Ingresarla empresa para la que labora:")
-    nuevo_contacto.nota = input("Ingresar nota del contacto:")
+    nuevo_contacto = Contacto (input("Ingresa el nombre del contacto: "))
+    nuevo_contacto.correo = input("Ingresa el correo el del contacto: ")
+    nuevo_contacto.teleono = input("Ingresa el teléfono del contacto: ")
+    nuevo_contacto.empresa = input("Ingresarla empresa para la que labora: ")
+    nuevo_contacto.nota = input("Ingresar nota del contacto: ")
     contactos.append(nuevo_contacto)
  
 
