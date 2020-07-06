@@ -19,12 +19,14 @@ def opciones():
     opcion = input("\t   : ")
     if opcion == "1":
         print("\n", 15*"-", "Agregar Contacto", 15*"-")
-        crear()
+        agregar()
+        agenda.agregarContactos(contactos)
         agenda.guardar()
     elif opcion == "2":
         print("\n", 15*"-", "Buscar Contacto", 15*"-")
     elif opcion == "3":
         print("\n", 15*"-", "Mostrar todo", 15*"-")
+        mostrar_contactos()
     elif opcion == "4":
         print("\n", 15*"-", "Borrar Contacto", 15*"-")
     elif opcion == "5":
@@ -34,7 +36,7 @@ def opciones():
         exit()
     else:
         print("\nOpción no válida\n")
-def crear():
+def agregar():
     nuevo_contacto = Contacto (input("Ingresa el nombre del contacto"))
     nuevo_contacto.correo = input("Ingresa el correo el del contacto")
     nuevo_contacto.teleono = input("Ingresa el teléfono del contacto")
@@ -42,6 +44,10 @@ def crear():
     nuevo_contacto.nota = input("Ingresar nota del contacto:")
     contactos.append(nuevo_contacto)
  
+def mostrar_contactos():
+    for id, contacto in enumerate(contactos):
+        print("ID: ", id, "=", "Nombre:", contacto.nombre, "Empresa:",contacto.empresa, "Correo:",contacto.correo, "Teléfono:",contacto.telefono, "Nota:", contacto.nota)
+        print("-" * 15)
 
 if __name__ == "__main__":
     while(opcion != "no"):
