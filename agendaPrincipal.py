@@ -18,6 +18,7 @@ if __name__ == "__main__":
         if op == "1":
             print("Contacto agregado\n")
         elif op == "2":
+            print("Buscar\n")
         elif op in ["salir", "no", "4"]:
             print("\nAdiós, bye")
             exit()
