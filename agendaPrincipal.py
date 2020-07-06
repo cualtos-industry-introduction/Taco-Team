@@ -19,6 +19,8 @@ def opciones():
     opcion = input("\t   : ")
     if opcion == "1":
         print("\n", 15*"-", "Agregar Contacto", 15*"-")
+        crear()
+        agenda.guardar()
     elif opcion == "2":
         print("\n", 15*"-", "Buscar Contacto", 15*"-")
     elif opcion == "3":
@@ -37,7 +39,7 @@ def crear():
     nuevo_contacto.correo = input("Ingresa el correo el del contacto")
     nuevo_contacto.teleono = input("Ingresa el teléfono del contacto")
     nuevo_contacto.empresa = input("Ingresarla empresa para la que labora:")
-    nuevo_contacto.nota = input("Ingresarla empresa para la que labora:")
+    nuevo_contacto.nota = input("Ingresar nota del contacto:")
     contactos.append(nuevo_contacto)
  
 
