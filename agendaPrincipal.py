@@ -40,6 +40,8 @@ def opciones():
         exit()
     else:
         print("\nOpción no válida\n")
+
+
 def agregar():
     nuevo_contacto = Contacto (input("Ingresa el nombre del contacto: "))
     nuevo_contacto.correo = input("Ingresa el correo el del contacto: ")
