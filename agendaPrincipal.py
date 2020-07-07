@@ -24,6 +24,10 @@ def opciones():
         agenda.guardar()
     elif opcion == "2":
         print("\n", 15*"-", "Buscar Contacto", 15*"-")
+        contactobuscar=input("nombre a buscar")
+        busquedacotaco={}
+        busquedacotaco=agenda.obtenerContacto(contactobuscar)
+        print(busquedacotaco)
     elif opcion == "3":
         print("\n", 15*"-", "Mostrar todo", 15*"-")
         mostrar_contactos()
@@ -48,6 +52,7 @@ def mostrar_contactos():
     for id, contacto in enumerate(contactos):
         print("ID: ", id, "=", "Nombre:", contacto.nombre, "Empresa:",contacto.empresa, "Correo:",contacto.correo, "Teléfono:",contacto.telefono, "Nota:", contacto.nota)
         print("-" * 15)
+3
 
 if __name__ == "__main__":
     while(opcion != "no"):
