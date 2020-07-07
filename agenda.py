@@ -62,8 +62,7 @@ class Agenda():
         for contacto in self.contactos:
             if contacto['nombre'] == nombre:
                 return contacto.copy()
-            else:
-                return {}
+        return {}
 
     def obtenerContactos(self):
         lista_contactos = []
