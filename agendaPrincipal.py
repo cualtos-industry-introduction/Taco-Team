@@ -24,7 +24,7 @@ def opciones():
         agenda.guardar()
     elif opcion == "2":
         print("\n", 15*"-", "Buscar Contacto", 15*"-")
-        contactobuscar=input("nombre a buscar")
+        contactobuscar=input("nombre a buscar: ")
         busquedacotaco={}
         busquedacotaco=agenda.obtenerContacto(contactobuscar)
         print(busquedacotaco)
@@ -41,11 +41,11 @@ def opciones():
     else:
         print("\nOpción no válida\n")
 def agregar():
-    nuevo_contacto = Contacto (input("Ingresa el nombre del contacto"))
-    nuevo_contacto.correo = input("Ingresa el correo el del contacto")
-    nuevo_contacto.teleono = input("Ingresa el teléfono del contacto")
-    nuevo_contacto.empresa = input("Ingresarla empresa para la que labora:")
-    nuevo_contacto.nota = input("Ingresar nota del contacto:")
+    nuevo_contacto = Contacto (input("Ingresa el nombre del contacto: "))
+    nuevo_contacto.correo = input("Ingresa el correo el del contacto: ")
+    nuevo_contacto.teleono = input("Ingresa el teléfono del contacto: ")
+    nuevo_contacto.empresa = input("Ingresarla empresa para la que labora: ")
+    nuevo_contacto.nota = input("Ingresar nota del contacto: ")
     contactos.append(nuevo_contacto)
  
 def mostrar_contactos():
